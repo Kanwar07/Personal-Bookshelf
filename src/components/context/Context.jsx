@@ -24,6 +24,11 @@ function Context({ children }) {
     };
     getdata();
   }, [searchinput]);
+
+  useEffect(() => {
+    const mybooks = JSON.parse(localStorage.getItem("books") || "[]");
+    setmybooks(mybooks);
+  }, []);
   return (
     <data.Provider
       value={{ bookdata, mybooks, setmybooks, searchinput, setSearchinput }}
