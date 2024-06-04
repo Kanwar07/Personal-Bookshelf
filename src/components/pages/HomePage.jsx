@@ -9,7 +9,7 @@ function HomePage() {
       <div className="flex justify-center items-center w-full mt-60">
         <NavLink to="/allbooks">
           <button
-            className="pt-2 pb-2 pr-6 pl-6 border rounded-2xl pt-2 pb-2 pr-4 pl-4 hover:shadow-2xl"
+            className="pt-2 pb-2 pr-6 pl-6 border rounded-2xl pt-2 pb-2 pr-4 pl-4 bg-[#d3d3d3] hover:shadow-2xl "
             onClick={() => setSearchinput("mystery ")}
           >
             Click to start Surfing for Books

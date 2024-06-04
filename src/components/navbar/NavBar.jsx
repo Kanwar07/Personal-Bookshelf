@@ -8,20 +8,22 @@ function NavBar() {
 
   return (
     <>
-      <div className="flex flex-row justify-around max-sm:flex-col max-sm:items-center">
+      <div className="flex flex-row justify-around items-center bg-[#d3d3d3] max-sm:flex-col max-sm:items-center">
         <NavLink to="/">
           <div className="flex flex-row items-center">
             <div>
-              <BookmarksIcon />
+              <BookmarksIcon fontSize="large" />
             </div>
-            <div className="pt-8 pr-8 pb-8 pl-2">BookShelf</div>
+            <div className="pt-8 pr-8 pb-8 pl-2 text-[32px]">
+              Book<span className="text-[#ffffff]">Shelf</span>
+            </div>
           </div>
         </NavLink>
         <div className="flex flex-row">
           <NavLink to="/allbooks">
             <div className="p-8">
               <button
-                className="pt-2 pb-2 pr-6 pl-6 border rounded-2xl pt-2 pb-2 pr-4 pl-4 hover:shadow-2xl"
+                className="pt-2 pb-2 pr-6 pl-6 border rounded-2xl pt-2 pb-2 pr-4 pl-4 bg-[#ffffff] hover:shadow-2xl"
                 onClick={() => setSearchinput("mystery")}
               >
                 All Books
@@ -30,7 +32,7 @@ function NavBar() {
           </NavLink>
           <NavLink to="/mybooks">
             <div className="p-8">
-              <button className="pt-2 pb-2 pr-6 pl-6 border rounded-2xl pt-2 pb-2 pr-4 pl-4 hover:shadow-2xl">
+              <button className="pt-2 pb-2 pr-6 pl-6 border rounded-2xl pt-2 pb-2 pr-4 pl-4 bg-[#ffffff] hover:shadow-2xl">
                 My BookShelf
               </button>
             </div>

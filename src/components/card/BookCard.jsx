@@ -26,7 +26,7 @@ function BookCard({ book }) {
 
   return (
     <>
-      <div className="flex flex-col max-w-sm border border-[2px] rounded-2xl ml-4 mr-4 mt-4 mb-4 bg-[#ffffff]">
+      <div className="flex flex-col max-w-sm border border-[2px] rounded-2xl ml-4 mr-4 mt-4 mb-4 bg-[#d3d3d3]">
         <div className="p-4">
           <div className="flex flex-row items-end pt-4 pb-4">
             <div className="text-[22px] pr-4">{book.title}</div>
@@ -46,14 +46,14 @@ function BookCard({ book }) {
           {mybooks.filter((mybook) => mybook.title === book.title).length >
           0 ? (
             <button
-              className="border rounded-2xl pt-2 pb-2 pr-4 pl-4 hover:shadow-xl"
+              className="border rounded-2xl pt-2 pb-2 pr-4 pl-4 bg-[#ffffff] hover:shadow-xl"
               onClick={() => removebooks(book.title)}
             >
               Remove from Shelf
             </button>
           ) : (
             <button
-              className="border rounded-2xl pt-2 pb-2 pr-4 pl-4 hover:shadow-xl"
+              className="border rounded-2xl pt-2 pb-2 pr-4 pl-4 bg-[#ffffff] hover:shadow-xl"
               onClick={() => addBooks(book)}
             >
               Add to Shelf
