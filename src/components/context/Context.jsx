@@ -8,7 +8,7 @@ function Context({ children }) {
   const page = 1;
   const pagelimit = 10;
   const [mybooks, setmybooks] = useState([]);
-  const [searchinput, setSearchinput] = useState("YOUR_QUERY");
+  const [searchinput, setSearchinput] = useState("mystery");
 
   useEffect(() => {
     const getdata = async () => {

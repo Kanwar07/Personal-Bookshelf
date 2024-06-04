@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import { data } from "../context/Context";
 
 function MyBookCard({ book }) {
+  const { mybooks, setmybooks } = useContext(data);
+
+  const removebooks = (title) => {
+    const removebook = mybooks.filter(
+      (removebook) => removebook.title !== title
+    );
+    localStorage.setItem("books", JSON.stringify(removebook));
+    setmybooks(removebook);
+  };
+
   return (
     <>
       <div className="flex flex-col max-w-sm border border-[2px] rounded-2xl ml-4 mr-4 mt-4 mb-4 bg-[#ffffff]">
@@ -20,6 +31,12 @@ function MyBookCard({ book }) {
                 : ""}
             </div>
           </div>
+          <button
+            className="border rounded-2xl pt-2 pb-2 pr-4 pl-4 hover:shadow-xl"
+            onClick={() => removebooks(book.title)}
+          >
+            Remove from Shelf
+          </button>
         </div>
       </div>
     </>

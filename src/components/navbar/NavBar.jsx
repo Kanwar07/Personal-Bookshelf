@@ -22,7 +22,7 @@ function NavBar() {
             <div className="p-8">
               <button
                 className="pt-2 pb-2 pr-6 pl-6 border rounded-2xl pt-2 pb-2 pr-4 pl-4 hover:shadow-2xl"
-                onClick={() => setSearchinput("YOUR_QUERY")}
+                onClick={() => setSearchinput("mystery")}
               >
                 All Books
               </button>
